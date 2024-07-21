@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadar diri itu perlu</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:white;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="kalimat"></h1>
+    </div>
+
+    <script>
+        function tampilkanKalimat() {
+            let kalimatElement = document.getElementById('kalimat');
+            let kalimat = "Ku terima cuek mu  dengan lapang dada dan terima kasih untuk semua nya 😊😊  dan maaf untuk segala hal yang kita  bikin sampai ngna marah,kita janji so tra akan ganggu ngana tapi kalau ada perlu chat saja kita selalu terbuka untuk orang yang kita cintai  berbahagialah dengan pilihan mu yang sekarang sekali lagi maaf😊😊  ";
+            let index = 0;
+            
+            function loopKalimat() {
+                if (index >= kalimat.length) {
+                    index = 0;
+                }
+                kalimatElement.textContent = kalimat.substring(0, index + 1);
+                index++;
+                setTimeout(loopKalimat, 200); 
+            }
+            
+            loopKalimat();
+        }
+
+        tampilkanKalimat();
+    </script>
+</body>
+</html>
